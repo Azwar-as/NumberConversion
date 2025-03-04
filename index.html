@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi-Bilangan</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=New+Rocker&family=Phudu:wght@300..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="logo">
+        <h1>Number Conversion</h1>
+        <h2>Biner - Oktal - Desimal - Hexa</h2>
+    </header>
+    <!-- Header End -->
+
+    <!-- Main Content -->
+    <main>
+        <div class="main-container">
+            <div class="form-content">
+                <div class="input-number">
+                    <label for="inputNumber">Amount</label>
+                    <input type="text" id="inputNumber" placeholder="Enter number here">
+                </div>
+                <div class="select-content">
+                    <div class="optInp">
+                        <label class="optLabel" for="optConvert">From</label>
+                        <select name="" class="optConv" id="fromConv">
+                            <option value="biner">Biner</option>
+                            <option value="oktal">Oktal</option>
+                            <option value="desimal" selected>Desimal</option>
+                            <option value="hexa">Hexa</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-change" id="btnChange"><img src="./assets/icons/change.svg" alt=""></button>
+
+                    <div class="optInp">
+                        <label class="optLabel" for="optConvert">To</label>
+                        <select name="" class="optConv" id="toConv">
+                            <option value="biner">Biner</option>
+                            <option value="oktal" selected>Oktal</option>
+                            <option value="desimal">Desimal</option>
+                            <option value="hexa">Hexa</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn-calc" id="btnCalculate">Calculate</button>
+            </div>
+
+            <div class="result">
+                <div>
+                    <div class="fromResult" id="fromResult">0 From Desimal = </div>
+                    <div class="toResult" id="toResult">0 Oktal</div>
+                    <div class="conversion-info" id="convertInfo">Converted From Desimal To Oktal</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Main Content End -->
+
+    <!-- Footer -->
+    <!-- <footer>
+        <p>Copyright By Author M.Azwar Ansahri</p>
+    </footer> -->
+    <!-- Footer End -->
+
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>
