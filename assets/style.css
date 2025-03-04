@@ -152,6 +152,41 @@ main {
   color: #686868;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.3rem;
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffffff;
+  color: #000000;
+  position: absolute;
+  bottom: 0;
+}
+
+.floating-button a button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  position: fixed;
+  right: 0.8rem;
+  bottom: 4rem;
+  z-index: 1;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all ease-in-out 0.2s;
+}
+
+.floating-button a button:hover {
+  background-color: #202020;
+}
+
 @media (max-width: 768px) {
   .main-container {
     width: 90%;
@@ -181,6 +216,15 @@ main {
   .toResult,
   .conversion-info {
     text-align: center;
+  }
+
+  footer {
+    padding: 0.5rem;
+  }
+
+  .floating-button a button {
+    padding: 0.5rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -212,5 +256,14 @@ main {
 
   .conversion-info {
     font-size: 0.8rem;
+  }
+
+  footer {
+    padding: 0.5rem;
+  }
+
+  .floating-button a button {
+    padding: 1rem;
+    font-size: 1rem;
   }
 }
