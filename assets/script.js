@@ -2,6 +2,7 @@ const inputNumber = document.getElementById("inputNumber");
 const fromConv = document.getElementById("fromConv");
 const toConv = document.getElementById("toConv");
 
+// Menukar Tipe Input Basis
 document.getElementById("btnChange").addEventListener("click", () => {
   const fromResult = document.getElementById("fromResult");
   const toResult = document.getElementById("toResult");
@@ -16,27 +17,7 @@ document.getElementById("btnChange").addEventListener("click", () => {
   convInfo.textContent = `Converted From ${fromConv.value} to ${toConv.value}`;
 });
 
-document.getElementById("btnCalculate").addEventListener("click", () => {
-  const fromResult = document.getElementById("fromResult");
-  const toResult = document.getElementById("toResult");
-  const convInfo = document.getElementById("convertInfo");
-
-  const number = inputNumber.value;
-  const fromBase = getBase(fromConv.value);
-  const toBase = getBase(toConv.value);
-
-  if (number && fromBase && toBase) {
-    const convertedNumber = convertNumber(number, fromBase, toBase);
-    fromResult.textContent = `From ${fromConv.value} = ${number}`;
-    toResult.textContent = `${convertedNumber} ${toConv.value}`;
-    convInfo.textContent = `Converted From ${fromConv.value} to ${toConv.value}`;
-    displayConversionProcess(number, fromBase, toBase);
-  } else {
-    convInfo.textContent =
-      "Please enter a valid number and select conversion types.";
-  }
-});
-
+// Menentukan Basis Angka
 function getBase(type) {
   switch (type) {
     case "biner":
@@ -52,7 +33,30 @@ function getBase(type) {
   }
 }
 
+// Fungsi Untuk Konversi Number
 function convertNumber(number, fromBase, toBase) {
   const decimalNumber = parseInt(number, fromBase);
   return decimalNumber.toString(toBase);
 }
+
+//Button Menjalankan Fungsi
+document.getElementById("btnCalculate").addEventListener("click", () => {
+  const fromResult = document.getElementById("fromResult");
+  const toResult = document.getElementById("toResult");
+  const convInfo = document.getElementById("convertInfo");
+
+  const number = inputNumber.value;
+  const fromBase = getBase(fromConv.value);
+  const toBase = getBase(toConv.value);
+
+  // Validasi Input
+  if (number && fromBase && toBase) {
+    const convertedNumber = convertNumber(number, fromBase, toBase);
+    fromResult.textContent = `From ${fromConv.value} = ${number}`;
+    toResult.textContent = `${convertedNumber} ${toConv.value}`;
+    convInfo.textContent = `Converted From ${fromConv.value} to ${toConv.value}`;
+  } else {
+    convInfo.textContent =
+      "Please enter a valid number and select conversion types.";
+  }
+});
