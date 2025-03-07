@@ -143,6 +143,12 @@ main {
   font-weight: 600;
   color: #5a5a5a;
 }
+
+.conversion-result {
+  color: #5f5e5e;
+  font-size: 1.5rem;
+}
+
 .toResult {
   font-weight: bolder;
   font-size: 1.8rem;

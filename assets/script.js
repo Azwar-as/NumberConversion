@@ -30,6 +30,7 @@ document.getElementById("btnCalculate").addEventListener("click", () => {
     fromResult.textContent = `From ${fromConv.value} = ${number}`;
     toResult.textContent = `${convertedNumber} ${toConv.value}`;
     convInfo.textContent = `Converted From ${fromConv.value} to ${toConv.value}`;
+    displayConversionProcess(number, fromBase, toBase);
   } else {
     convInfo.textContent =
       "Please enter a valid number and select conversion types.";
