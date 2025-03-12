@@ -17,7 +17,7 @@ document.getElementById("btnChange").addEventListener("click", () => {
   convInfo.textContent = `Converted From ${fromConv.value} to ${toConv.value}`;
 });
 
-// Menentukan Basis Angka
+//Fungsi Untuk Menentukan Basis Angka
 function getBase(type) {
   switch (type) {
     case "biner":
@@ -39,7 +39,7 @@ function convertNumber(number, fromBase, toBase) {
   return decimalNumber.toString(toBase);
 }
 
-//Button Menjalankan Fungsi
+//Button untuk Menjalankan Fungsi
 document.getElementById("btnCalculate").addEventListener("click", () => {
   const fromResult = document.getElementById("fromResult");
   const toResult = document.getElementById("toResult");
