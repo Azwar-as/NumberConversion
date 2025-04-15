@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konversi-Bilangan</title>
+    <title>Number Conversion</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +18,7 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- External CSS -->
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
@@ -31,15 +32,15 @@
     <!-- Source Code Button End-->
 
     <!-- Header -->
-    <header class="logo">
+    <header class="header">
         <h1>Number Conversion</h1>
-        <h2>Biner - Oktal - Desimal - Hexa</h2>
+        <h2>Binary - Octal - Decimal - Hexadecimal</h2>
     </header>
     <!-- Header End -->
 
     <!-- Main Content -->
     <main>
-        <div class="main-container">
+        <section class="main-container">
             <div class="form-content">
                 <div class="input-number">
                     <label for="inputNumber">Amount</label>
@@ -47,38 +48,43 @@
                 </div>
                 <div class="select-content">
                     <div class="optInp">
-                        <label class="optLabel" for="optConvert">From</label>
-                        <select name="" class="optConv" id="fromConv">
-                            <option value="biner">Biner</option>
-                            <option value="oktal">Oktal</option>
-                            <option value="desimal" selected>Desimal</option>
-                            <option value="hexa">Hexa</option>
+                        <label class="optLabel" for="fromConv">From</label>
+                        <select id="fromConv" class="optConv">
+                            <option value="binary">Binary (2)</option>
+                            <option value="octal">Octal (8)</option>
+                            <option value="decimal" selected>Decimal (10)</option>
+                            <option value="hexadecimal">Hexadecimal (16)</option>
                         </select>
                     </div>
+                </div>
 
-                    <button class="btn-change" id="btnChange"><img src="./assets/icons/change.svg" alt=""></button>
+                <button class="btn-change" id="btnChange"><img src="./assets/icons/change.svg" alt="Change"></button>
 
+                <div class="select-content">
                     <div class="optInp">
-                        <label class="optLabel" for="optConvert">To</label>
-                        <select name="" class="optConv" id="toConv">
-                            <option value="biner">Biner</option>
-                            <option value="oktal" selected>Oktal</option>
-                            <option value="desimal">Desimal</option>
-                            <option value="hexa">Hexa</option>
+                        <label class="optLabel" for="toConv">To</label>
+                        <select id="toConv" class="optConv">
+                            <option value="binary">Binary (2)</option>
+                            <option value="octal" selected>Octal (8)</option>
+                            <option value="decimal">Decimal (10)</option>
+                            <option value="hexadecimal">Hexadecimal (16)</option>
                         </select>
                     </div>
                 </div>
                 <button class="btn-calc" id="btnCalculate">Calculate</button>
             </div>
-
             <div class="result">
                 <div>
-                    <div class="fromResult" id="fromResult">0 From Desimal = </div>
-                    <div class="toResult" id="toResult">0 Oktal</div>
-                    <div class="conversion-info" id="convertInfo">Converted From Desimal To Oktal</div>
+                    <div class="fromResult" id="fromResult">Decimal Number : 0 </div>
+                    <div class="conversion-result" id="conversionResult">
+                        <h5>Conversion Steps:</h5>
+                        <div class="conversion-steps" id="conversionSteps"></div>
+                    </div>
+                    <div class="toResult" id="toResult">Octal Number : 0</div>
+                    <div class="conversion-info" id="convertInfo">Converted From Decimal To Octal</div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     <!-- Main Content End -->
 
@@ -87,7 +93,6 @@
         <p>© 2025 WarzDev. Designed & Developed by Azwar. All rights reserved.</p>
     </footer>
     <!-- Footer End -->
-
     <script src="./assets/script.js"></script>
 </body>
 
